@@ -2,7 +2,10 @@
 ## 🔬 Use your microscope for microfabrication! 
 Microscope with DMD projector is used to cure 3D printing resin. Based on uManager so [many hardware devices are compatible](https://micro-manager.org/Device_Support).
 Using the X/Y stage of the microscope, large structures can be printed while maintaining high spatial resolution.
-`fabscope_notebook.py` offers step-by-step instructions to set up and calibrate the hardware, and a simple-to-use GUI in napari for checking the focus and aligning mutiple layers.
+
+- `fabscope_notebook.py` offers step-by-step instructions to set up and calibrate the hardware, and a simple-to-use GUI in napari for checking the focus and aligning mutiple layers.
+- `./manager/` contains helper functions to control the hardware, e.g. calibrate the DMD and easily upload masks.
+- `./utils/` contains helper functions to load and tile masks, and the code for the GUI and live streaming camera data from the microscope.
 
 ----
 ### Example of a microfluidic chip:
