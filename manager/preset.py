@@ -61,7 +61,8 @@ class preset:
         except KeyboardInterrupt:
             print('Caught keyboard interrupt. Quitting')
             raise KeyboardInterrupt
-        except:
+        except Exception as e:
+            print(e)
             #Caught an error. Try again.
             print(f'Error when applying setting. Retry nb. {i}.')
             time.sleep(1)
