@@ -1,0 +1,29 @@
+[project]
+name = "fabscope"
+version = "0.2.0"
+description = "Use a Micro-Manager-controlled microscope + DMD for maskless microfabrication."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+readme = "README.md"
+dependencies = [
+    "pymmcore-plus>=0.17.3",
+    "useq-schema>=0.7",
+    "napari>=0.4.19",
+    "napari-micromanager",
+    "numpy",
+    "scikit-image",
+    "matplotlib",
+    "tqdm",
+    "ipykernel",
+    "pyqt6",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+# Track hinderling's fork on fix/device-leak-on-close (open PR
+# pymmcore-plus/napari-micromanager#374). Includes the merged fixes for
+# MDA-teardown timer crashes (#369), external-core handoff (#365),
+# generator-MDA crashes (#364), and the open Mosaic 3 teardown fix.
+napari-micromanager = { path = "C:/Users/lh21x018/Documents/code/napari-micromanager", editable = true }
